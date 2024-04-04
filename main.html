@@ -14,23 +14,28 @@
     </head>
     <body>
         <header>
-            <div class="menubar">
+            <div class="header">
                 <div id="left" class="headerPart logo">
-                    <img src="images/logo.jpg" alt="lakosmetic">
+                    <a href="#">
+                        <img src="images/logo.jpg" alt="lakosmetic">
+                    </a>
                 </div>
                 <div id="middle" class="headerPart menu">
                     <ul>
                         <li> 
                             <a href="#">Home</a>
                         </li>
-                        <li> 
-                            <a href="#">Beauty Shop</a>
+                        <li class="dropdown"> 
+                            <a href="#">
+                                Beauty Shop
+                                <img src="images\arrow.png" alt="">
+                            </a>
                             <ul class="underMenu">
-                                <li>
-                                    <a href="#">Body</a>
+                                <li id="openPage">
+                                    <a href="https://www.hemnet.se/">Body</a>
                                 </li>
-                                <li>
-                                    <a href="#">Face</a>
+                                <li id="openPage">
+                                    <a href="https://www.hemnet.se/">Face</a>
                                 </li>
                             </ul>
                         </li>
@@ -38,7 +43,7 @@
                             <a href="#">Beauty Kit</a>
                         </li>
                         <li>
-                            <a href="#">Cosmetics</a>
+                            <a href="https://www.hemnet.se/">Cosmetics</a>
                         </li>
                         <li>
                             <a href="#">Contacts</a>
@@ -47,34 +52,54 @@
 
                 </div>
                 <div id="right" class="headerPart">
-                    <div class="user">
-                        <ul>
-                            <li> <a href="#"><img src="images\face.png" alt="facebookIcon"></a></li>
-                            <li><a href="#"><img src="images\instagram.png" alt="InstagramIcon"></a></li>
-                        </ul>
-                    </div>
                     <div class="soc">
                         <ul>
                             <li> <a href="#"><img src="images\face.png" alt="facebookIcon"></a></li>
                             <li><a href="#"><img src="images\instagram.png" alt="InstagramIcon"></a></li>
-                            <li><a href="#"><img src="images\instagram.png" alt="InstagramIcon"></a></li>
+                        </ul>
+                    </div>
+                    <div class="user">
+                        <ul>
+                            <li> <a href="#"><img src="images\search.png" alt="searchIcon"></a></li>
+                            <li><a href="#"><img src="images\user.png" alt="userIcon"></a></li>
+                            <li><a href="#"><img src="images\shop.png" alt="shopIcon"></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div id="movingText">
-
-            </div>
         </header>
         <div class="hero">
-
+            <img src="images\kosmetic.jpg" alt="bottles">
+            <form action="https://google.com">
+                <button type="submit" value="Discover la kosmetic">Discover la kosmetic</button>
+            </form>
         </div>
-        <div class="pictures">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+        <div class="scrollContainer">
+            <p> Trla baba lan, da joj prodje dan! Trla baba, trla baba, trla baba lan!!</p>
         </div>
-        <div class="devide">
+        <div class="container">
+            <div class="row products">
+                <h2>Best Seller</h2>
+                <div class="box col-md-4"><a href="#"><img class="responsive" src="images\product1.jpg" alt=""></a></div>
+                <div class="box col-md-4"><a href="#"><img class="responsive" src="images/product1.jpg" alt=""></a></div>
+                <div class="box col-md-4"><a href="#"><img class="responsive" src="images/product1.jpg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="images\hero2.jpg" alt="lade">
+            <form action="https://google.com">
+                <button type="submit" value="Discover Now">Discover now</button>
+            </form>
+        </div>
+        <div class="container">
+            <div class="row products">
+                <h2>Best Seller</h2>
+                <div class="box col-md-4"><a href="#"><img class="responsive" src="images\product1.jpg" alt=""></a></div>
+                <div class="box col-md-4"><a href="#"><img class="responsive" src="images/product1.jpg" alt=""></a></div>
+                <div class="box col-md-4"><a href="#"><img class="responsive" src="images/product1.jpg" alt=""></a></div>
+            </div>
+        </div>        
+        <div class="devider">
 
         </div>
         <div class="socmedia">
