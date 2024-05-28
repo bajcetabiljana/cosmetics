@@ -11,14 +11,13 @@ a {
     width: 100%;
     height: auto;
 }
+button {
+    cursor: pointer;
+}
 .container {
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
-
+    margin:auto;
+    width: 92%;
 }
 .row {
     margin-left: -15px;
@@ -31,7 +30,13 @@ a {
     padding-left: 11px;
     padding-right: 11px;
 }
+/*.col-md-2 {
+    width: 50%;
+    float: left;
+    position: relative;
+}*/
 
+/* Header */
 .topHeader {
     font-size: 14px;
     line-height: 1.5;
@@ -55,7 +60,7 @@ a {
     }
     li {
         list-style: none;
-        line-height: 2.4;
+        line-height: 2.7;
 
         a {
             font-size: 13px;
@@ -69,8 +74,11 @@ a {
     }
     .dropdown {
         position: relative;
-        padding-left: 10px;
         z-index: 1000;
+    }
+
+    .dropdown a {
+        padding: 0 10px;
     }
     .underMenu {
         position: absolute;
@@ -80,11 +88,21 @@ a {
         flex-direction: column;
         gap: 0;
         background-color: #1d1c1e;
-        padding: 25px 15px;
     }
     .underMenu a {
         text-transform: none;
+        display: block;
+        padding: 5px 20px;
     }
+
+    .underMenu li:first-child a {
+        padding-top: 25px;
+    }
+
+    .underMenu li:last-child a {
+        padding-bottom: 20px;
+    }
+
     .underMenu li {
         line-height: 1.4;
     }
@@ -119,6 +137,8 @@ a {
          display: none;
     }
 }
+
+/* Hero */
 .hero {
     position: relative;
 }
@@ -130,13 +150,13 @@ a {
     margin-bottom: 1px;
 }
 
-form {
+.hero form {
     position: absolute;
     bottom: 90px;
     left: 5%;
 }
 
-button {
+.hero button {
     width: 200px;
     height: 48px;
     font-weight: 400;
@@ -145,18 +165,19 @@ button {
     letter-spacing: .08em;
     color: #fff;
     text-transform: uppercase;
-    cursor: pointer;
     background-color: #1d1c1e;
     text-align: center;
     box-sizing: content-box;
     padding: 0 10px;
 }
 
+/* Moving text*/
+
 .scrollContainer {
+    position: relative;
+    overflow: hidden;
     background-color: #efb5d9;
     border: 3px solid #efb5d9;
-    border-radius: 5px;
-    overflow: hidden;
     font-size: 28px;
     color: #fff;
   }
@@ -198,7 +219,8 @@ button {
     }
   }
 
-  .products  {
+  /*Products*/
+.products  {
     margin-top: 120px;
   }
 .products h2 {
@@ -212,7 +234,8 @@ button {
 
 .product {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 25px;
     margin: 40px 0;    
 }
 
@@ -221,11 +244,8 @@ button {
 }
 
 .item {
-    width: 31.6%;
     position: relative;
-    background-color: red;
 }
-
 
 .infoBox {
     background-color: #282828;
@@ -233,8 +253,6 @@ button {
     box-sizing: border-box;
     padding: 2px 15px 15px;
     transition: all 2s;
-    position: absolute;
-    z-index: 10;
     
     h2 {
         font-size: 18px;
@@ -247,24 +265,9 @@ button {
         color: white;
     }
 }
-
-
-
-
-.item:hover > .hiddenProduct {
+.hiddenProduct .infoBox {
     position: absolute;
-    top: 0;
-    display: flex
-}
-
-
-.hiddenProduct:hover .infoBox {
-    transform: translateY(-100px);
-}
-
-.hoverProduct:hover + .hiddenProduct .infoBox {
-    position: absolute;
-    bottom: 0;
+    bottom: -100px;
     left: 0;
     right: 0;
 }
@@ -274,57 +277,181 @@ button {
     display: none;
 }
 
-
-
-
-
-.box {
-    margin-top: 35px;
-    margin-bottom: 105px;
+.item:hover > .hiddenProduct {
+    position: absolute;
+    top: 0;
+    display: block;
 }
 
 
-.display {
-    background-color: black;
-    height: 100px;
+.hiddenProduct:hover .infoBox {
+    transform: translateY(-100px);
 }
 
-.ht {
+/*twoImges*/
+
+.resizeBg {
+    background-color: #eeeeee;
+    padding: 50px 20px 20px 20px;
+}
+
+.fixed {
+    position: relative;
+}
+.resizeImg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    resize: inline;
+    overflow: hidden;
+}
+.resizeImg img {
+    height: 100%;
+}
+
+
+/* footer*/
+
+.follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 70px;
+    margin: 20px auto;
+    margin-bottom: 65px;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    opacity: 0.7;
+}
+
+.follow div {
+    display: flex;
+    gap: 15px;
+}
+.follow p {
+    text-transform: uppercase;
+}
+.follow img {
+    width: 25px;
+}
+
+.policy, .copyright {
+    opacity: 0.7;
+    p {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 10px;
+    }
+    span {
+        font-size: 14px;
+        padding-right: 20px;   
+    }
+}
+
+.policy p:first-child {
+    padding-left: 0;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 170px;
+}
+.cards img {
+    width: 50px;
     height: 30px;
 }
-.first {
-    background-color: red;
-}
-.second {
-    background-color: green;
-}
-.third {
-    background-color: blue;
+
+.bottom {
+    display: flex;
+    gap: 2%;
+    margin-bottom: 30px;
 }
 
+.bottom > div:first-child {
+    width: 60%;
+}
 
+.bottom > div:last-child {
+    width: 40%;
+    position: relative;
+}
 
-.dis {
-    display: block;
+.select {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+}
+
+.select select {
+    font-size: 15px;
+    padding: 7px;
+    background-color: lightgrey;
+    border: none;
+}
+
+.valut select {
+    width: 220px;
+    margin-right: 5px;
+}
+
+.select div {
     display: inline;
 }
 
+.fixedItems > button:first-child {
+    padding: 9px;
+    border-radius: 15px;
+    background-color: palevioletred;
+    color: white;
+    position: fixed;
+    bottom: 120px;
+    left: 20px;
+}
 
+.fixedItems > button:nth-child(2) {
+    bottom: 120px;
+    right: 20px;
+    background-color: green;
+    border-radius: 40px;
+    padding: 12px;
+    border-radius: 25px;
+}
 
-.dis:hover {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.fixedItems > button:last-child {
+    bottom: 40px;
     left: 0;
-}
-header {
-    position: relative;
-    height: auto;
-}
-.display {
-    position: relative;
+    right: 0;
+    width: 160px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 2px 3px 10px silver;
+    padding: 15px;
+    border-radius: 14px;
+    text-transform: uppercase;
+    color: black;
 }
 
-
+.fixedItems button {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 19px;
+    color: white;
+    border-color: transparent;
+   img {
+    width: 32px;
+   } 
+}
+ 
 
 

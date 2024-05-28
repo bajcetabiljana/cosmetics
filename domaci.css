@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    gap: 1.75rem;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.product {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+.hidden img {
+    display: block;
+}
+
+.under {
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    left:0;
+    right:0;
+    padding: 20px;
+}
+
+.under h3 {
+    margin-top:0;
+}
+
+.product:hover .hidden {
+    display: block;
+}
