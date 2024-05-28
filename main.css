@@ -306,6 +306,9 @@ button {
     resize: inline;
     overflow: hidden;
 }
+.fixedImg img {
+    display: block;
+}
 .resizeImg img {
     height: 100%;
 }

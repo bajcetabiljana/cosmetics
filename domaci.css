@@ -1,41 +1,26 @@
-.container {
-    display: flex;
-    gap: 1.75rem;
-}
-
-.responsive {
+.responsive  {
     width: 100%;
     height: auto;
 }
 
-.product {
+.resizeBg {
+    background-color: silver;
+    padding: 30px;
+}
+.fixededImg {
+    display: block;
+}
+.resizeBox {
     position: relative;
 }
-
-.hidden {
-    display: none;
+.resize {
     position: absolute;
     top: 0;
-}
-
-.hidden img {
-    display: block;
-}
-
-.under {
-    position: absolute;
+    left: 0;
     bottom: 0;
-    background-color: black;
-    color: white;
-    left:0;
-    right:0;
-    padding: 20px;
+    resize: inline;
+    overflow: hidden;
 }
-
-.under h3 {
-    margin-top:0;
-}
-
-.product:hover .hidden {
-    display: block;
+.resize img {
+    height: 100%;
 }
