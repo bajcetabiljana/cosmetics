@@ -1,8 +1,20 @@
 body {
+    position: relative;
     font-family: sans-serif;
     color: #1d1c1e;
     line-height: 1.4;
     margin: 0;
+}
+.overlay {
+    background-color: #000000b3;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
 }
 a {
     text-decoration: none;
@@ -37,6 +49,10 @@ button {
 }*/
 
 /* Header */
+
+header {
+    position: relative;
+}
 .topHeader {
     font-size: 14px;
     line-height: 1.5;
@@ -48,11 +64,10 @@ button {
 
 .bottomHeader {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 25px;
     box-sizing: border-box;
-
     ul {
         padding: 0;
         display: flex;
@@ -71,46 +86,52 @@ button {
             color: #1d1c1e;
 
         }
+        .close {
+            display: none;
+        }
     }
-    .dropdown {
+}    
+
+
+.menu .dropdown {
         position: relative;
         z-index: 1000;
     }
 
-    .dropdown a {
+.menu .dropdown a {
         padding: 0 10px;
     }
-    .underMenu {
+.menu .underMenu {
         position: absolute;
         left: 0;
         right: -85px;
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 0;
-        background-color: #1d1c1e;
+        background-color: gray;
     }
-    .underMenu a {
+.menu .underMenu a {
         text-transform: none;
         display: block;
         padding: 5px 20px;
     }
 
-    .underMenu li:first-child a {
+.menu .underMenu li:first-child a {
         padding-top: 25px;
     }
 
-    .underMenu li:last-child a {
+.menu .underMenu li:last-child a {
         padding-bottom: 20px;
     }
 
-    .underMenu li {
+.menu .underMenu li {
         line-height: 1.4;
     }
-    .dropdown img {
+.menu .dropdown img {
         width: 12px;
     }
-    .dropdown:hover {
-        background-color: #1d1c1e;
+.menu .dropdown:hover {
+        background-color: gray;
         a {
             color: whitesmoke;
         }
@@ -118,25 +139,94 @@ button {
             display: flex;
         }
     }
+/*HiddenMenu*/
+
+  .hiddenMenu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 350px;
+    height: auto;
+    background-color: gray;
+    padding-top: 10px;
+  }
+ .hiddenMenu ul {
+        display: block;
+    }
+ .hiddenMenu li a {
+        display: block;
+        color: white;
+        padding: 10px 20px;
+
+    }
+.hiddenMenu .dropdown a {
+        padding: 10px 20px;
+    }
+.hiddenMenu .underMenu {
+        display: block;
+        position: static;
+        li {
+            line-height: 2.7;
+        }
+        a {
+            text-transform: uppercase;
+        }
+    }
+.hiddenMenu .underMenu li:first-child a {
+        padding: 10px 20px;
+    }
+.hiddenMenu .underMenu li:last-child a {
+        padding: 10px 20px;
+    }
+
+.socToogle {
+    display: none;
+}
+.socToogle img {
+    width: 20px;
+}
+  
+    .soc {
+        margin-right: 25px;
+    }
+    .search {
+        margin-left: 5px;
+    }
+   
+    /*Toogle Menu*/
+.toogleMenu {
+    cursor: pointer;
+    display: none;
+}
+
+.toogleMenu span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color:black;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
 
     #right {
         display: flex;
-        gap: 1.75rem;
+        align-items: center;
+        gap: 1rem;
         li a {
             padding: 0;
         }
         img {
-            width: 20px;
+            width: 25px;
         }
         ul {
             display: flex;
             gap: 0.75rem;
         }
     }
-     .underMenu {
-         display: none;
-    }
-}
+
 
 /* Hero */
 .hero {
@@ -178,11 +268,12 @@ button {
     overflow: hidden;
     background-color: #efb5d9;
     border: 3px solid #efb5d9;
-    font-size: 28px;
+    font-size: 24px;
     color: #fff;
   }
   
   .scrollContainer p {
+    white-space: nowrap;
     margin: 12px;
     /* animation properties */
     -moz-transform: translateX(100%);
@@ -363,19 +454,20 @@ button {
 }
 
 .cards {
-    display: flex;
-    gap: 8px;
+    text-align: right;
     margin-bottom: 170px;
 }
 .cards img {
     width: 50px;
     height: 30px;
+    padding-right: 5px;
 }
 
 .bottom {
+    position: relative;
     display: flex;
     gap: 2%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .bottom > div:first-child {
@@ -384,14 +476,13 @@ button {
 
 .bottom > div:last-child {
     width: 40%;
-    position: relative;
 }
 
 .select {
-    width: 100%;
     position: absolute;
     bottom: 0;
-    text-align: right;
+    right: 0;
+
 }
 
 .select select {
@@ -402,7 +493,7 @@ button {
 }
 
 .valut select {
-    width: 220px;
+    width: 300px;
     margin-right: 5px;
 }
 
@@ -454,6 +545,86 @@ button {
    img {
     width: 32px;
    } 
+}
+
+@media(max-width:991px){
+
+
+    .bottom {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .bottom >div:first-child  {
+        width: 100%;
+    }
+    .bottom >div:last-child {
+        width: 100%;
+    }
+    .copyright {
+        margin-top: 10px;
+        margin-bottom: 100px;
+    }
+    .cards {
+        margin-bottom: 20px;
+        text-align:center;
+    }
+    .bottomHeader {
+        position: static;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .menu, .soc {
+        display: none;
+    }
+  
+    .hiddenMenu {
+       /* display: block;*/
+    }
+    .hiddenMenu .socToogle {
+        display: block;
+        
+    }
+    .toogleMenu {
+        display: block;
+    }
+    .socToogle ul {
+        margin-top: 0;
+    }
+    .socToogle li {
+        display: inline;
+    }
+    .socToogle li a {
+        display: inline;
+        padding-right: 0;
+    }
+    .close {
+        display: block;
+    }
+    .close::before {
+        content: "x";
+        font-size: 30px;
+        color: white;
+        padding: 20px;
+    }
+    .logo {
+        max-width: 100px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .search{
+        position: absolute;
+        left: 50px;
+    }
+
+}
+
+@media(max-width:767px){
+    .select {
+        width: 100%;
+    }
 }
  
 

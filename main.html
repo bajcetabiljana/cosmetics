@@ -13,17 +13,21 @@
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     </head>
     <body>
+        <section class="overlay"></section>
        <header>
             <div class="topHeader">
                 <p>Lorem ipsum dolor sit amet!</p>
             </div>
-             <div class="bottomHeader">
+            <div class="bottomHeader">
+                <div class="toogleMenu">
+                    <span></span><span></span><span></span>
+                </div>
                 <div id="left" class="headerPart logo">
                     <a href="#">
                         <img class="responsive" src="images/logo.jpg" alt="lakosmetic">
                     </a>
                 </div>
-                <div id="middle" class="headerPart menu">
+                <div  class="menu">
                     <ul>
                         <li> 
                             <a href="file:///C:/Users/bilja/Programiranje/projects/lakosmetic/main.html">Home</a>
@@ -52,24 +56,63 @@
                             <a href="#">Contacts</a>
                         </li>
                     </ul>
-
                 </div>
-                <div id="right" class="headerPart">
+                <div  class="hiddenMenu">
+                    <a class="close" href="#"></a>
+                    <ul>
+                        <li> 
+                            <a href="file:///C:/Users/bilja/Programiranje/projects/lakosmetic/main.html">Home</a>
+                        </li>
+                        <li class="dropdown"> 
+                            <a href="#">
+                                Beauty Shop
+                                <img src="images\arrow.png" alt="">
+                            </a>
+                            <ul class="underMenu">
+                                <li id="openPage">
+                                    <a href="https://www.hemnet.se/">Body</a>
+                                </li>
+                                <li id="openPage">
+                                    <a href="https://www.hemnet.se/">Face</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li> 
+                            <a href="https://www.w3schools.com/howto/howto_css_display_element_hover.asp">Beauty Kit</a>
+                        </li>
+                        <li>
+                            <a href="https://www.hemnet.se/">Cosmetics</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                    </ul>
+                    <div class="socToogle">
+                        <ul>
+                            <li> <a href="#"><img src="images\facebook.png" alt="facebookIcon"></a></li>
+                            <li><a href="#"><img src="images\instagram.png" alt="InstagramIcon"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="right">
                     <div class="soc">
                         <ul>
                             <li> <a href="#"><img src="images\facebook.png" alt="facebookIcon"></a></li>
                             <li><a href="#"><img src="images\instagram.png" alt="InstagramIcon"></a></li>
                         </ul>
                     </div>
+                    <div class="search">
+                        <a href="#"><img src="images\search.png" alt="searchIcon"></a>
+                    </div>
                     <div class="user">
                         <ul>
-                            <li> <a href="#"><img src="images\search.png" alt="searchIcon"></a></li>
                             <li><a href="#"><img src="images\user.png" alt="userIcon"></a></li>
                             <li><a href="#"><img src="images\bag.png" alt="shopIcon"></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+  
         </header>
         <div class="hero">
             <img src="images\hero1.jpg" alt="bottles">
@@ -219,10 +262,7 @@
             <div class="bottom">
                 <div>
                     <div class="policy">
-                        <p><span>lorem</span><span>lorem</span><span>bla</spanspan  ijos></p>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing. and typesetting industry.
-                        </p>
+                        <p><span>lorem</span><span>lorem</span><span>bla</span><span>Lorem</span></p>
                     </div>
                     <div class="copyright">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
@@ -230,12 +270,14 @@
                 </div>
                 <div>
                     <div class="cards">
-                        <img src="images/drops2" alt="">
-                        <img src="images/blackfriday.jpg" alt="">
-                        <img src="images/drops.jpg" alt="">
-                        <img src="images/fllowers.jpg" alt="">
                         <img src="images/heart.jpg" alt="">
-                    </div>
+                        <img src="images/heart.jpg" alt="">
+                        <img src="images/heart.jpg" alt="">
+                        <img src="images/heart.jpg" alt="">
+                        <img src="images/heart.jpg" alt="">
+                        <img src="images/heart.jpg" alt="">
+                        <img src="images/heart.jpg" alt="">
+                    </div> 
                     <div class="select">
                         <div class="valut">
                             <select id="valut" name="country">
@@ -254,13 +296,12 @@
                     </div>     
                 </div>
             </div>
-
         </footer>
         <div class="fixedItems">
             <button type="button" onclick="alert('Hello world!')">
                 <span><img src="images/user.png" alt=""></span> Chat
             </button>
-            <button type="button" onclick="alert('Hello Maso!')">
+            <button type="button" onclick="alert('Cao Ficoooo!')">
                 <span><img src="images/phone.png" alt=""></span>
             </button>
             <button type="button" onclick="alert('Hello subscribe!')">
